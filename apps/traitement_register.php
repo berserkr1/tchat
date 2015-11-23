@@ -1,6 +1,6 @@
 <?php
-
-	$pseudo=$mdp=$mdp2=""; $errors= new array();
+	$pseudo = $mdp = $mdp2 = "";
+	$errors = "";
 	if (isset($_POST['pseudo'], $_POST['mdp'],$_POST['mdp2'])) {
 		$pseudo = mysqli_real_escape_string($db, $_POST['pseudo']);
 		$mdp = mysqli_real_escape_string($db, $_POST['mdp']);
