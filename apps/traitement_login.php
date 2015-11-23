@@ -1,11 +1,11 @@
 <?php
-	$pseudo="";
-	$mdp="";
+	$pseudo = "";
+	$mdp = "";
 
 	if (isset($_POST['pseudo'], $_POST['mdp'])) {
 	$pseudo = mysqli_real_escape_string($db, $_POST['pseudo']);
 	$mdp = $_POST['mdp'];
-	$query = "SELECT * FROM user WHERE pseudo='".$pseudo."'";
+	$query = "SELECT * FROM user WHERE pseudo='" . $pseudo . "'";
 	$resultat = mysqli_query($db, $query);
 	if ($resultat)
 	{

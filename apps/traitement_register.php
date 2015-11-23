@@ -2,9 +2,9 @@
 $pseudo = "";
 $mdp1 = "";
 $mdp2 = "";
-if (isset($_POST['login'], $_POST['mdp1'], $_POST['mdp2']))
+if (isset($_POST['pseudo'], $_POST['mdp1'], $_POST['mdp2']))
 {
-	$login = mysqli_real_escape_string($db, $_POST['pseudo']);
+	$pseudo = mysqli_real_escape_string($db, $_POST['pseudo']);
 	$mdp1 = $_POST['mdp1'];
 	$mdp2 = $_POST['mdp2'];
 	if ($mdp1 != $mdp2)
