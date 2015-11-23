@@ -1,6 +1,6 @@
 <?php
 session_start();
-$db = mysqli_connect('localhost', 'root', 'troiswa', 'tchat');
+$db = mysqli_connect('192.168.1.84', 'mickael', '', 'tchat');
 if ($db === false)
 	die(mysqli_connect_error()); 	
 	$access = array('accueil', 'login', 'logout', 'register');
