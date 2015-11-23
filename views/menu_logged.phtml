@@ -6,9 +6,8 @@
 			<a href="?page=accueil" class="navbar-brand"><img src='' alt="Logo"/></a>
 		</div>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="?page=accueil" class="navbar-link">Accueil</a></li>
-			<li><a href="?page=login" class="navbar-link">Se connecter</a></li>
-			<li><a href="?page=register" class="navbar-link">S'enregistrer</a></li>
+			<li><a href="">Bonjour <?php echo htmlentities($_SESSION['login']); ?></a></li>
+			<li><a href="?page=logout" class="navbar-link">Se déconnecter</a></li>
 		</ul>
 	</div>
 </nav>
