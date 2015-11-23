@@ -1,5 +1,5 @@
 <?php
-	$pseudo=""; $mdp="";
+	$pseudo=""; $mdp=""; $errors= new array();
 		if (isset($_POST['pseudo'], $_POST['mdp'])) {
 		$pseudo = mysqli_real_escape_string($db, $_POST['pseudo']);
 		$mdp = $_POST['mdp'];
