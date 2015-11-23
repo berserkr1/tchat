@@ -2,8 +2,7 @@
 session_start();
 $db = mysqli_connect('localhost', 'root', 'troiswa', 'tchat');
 if ($db === false)
-	die(mysqli_connect_error()); 
-	$errors = new array();
+	die(mysqli_connect_error()); 	
 	$access = array('accueil', 'login', 'logout', 'register');
 	$traitements = array('login', 'logout', 'register');
 	$accessAdmin = array('admin', 'accueil', 'login', 'logout', 'register');
