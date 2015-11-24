@@ -1,15 +1,15 @@
-<h2>REGISTER</h2>
+<h2>ENREGISTREMENT</h2>
 <div style="background-color:red;"><?php echo implode('<br/>', $errors) ?></div>
 <form method='post' action='index.php?page=register'>
-	<label for='pseudo'>Pseudonyme (4 caractères minimum) : </label><input type='text' name='pseudo' value="<?php echo htmlentities($pseudo); ?>" id='pseudo'  />
+	<label for='pseudo'>Pseudonyme (4 caractères minimum) : </label><input type='text' name='pseudo' value="<?php echo htmlentities($pseudo); ?>" id='pseudo' required />
 	<fieldset>
-		<legend>Avatar</legend>
+		<legend>Avatar - 25Ko, 150x150 maximum (optionnel)</legend>
 		<label for='source'>Source</label>
 		<input type='file' name='avatar_source' id='source' />
 		<label for='url'>ou URL</label>
 		<input type='url' name='avatar_url' id='url' class='form-control' />
 	</fieldset>
-	<label for='mdp'>Mot de passe (6 caractères minimum) : </label><input type='password' name='mdp' value="" id='mdp' />
-	<label for='mdp2'>Vérification mot de passe : </label><input type='password' name='mdp2' value="" id='mdp2' />
-	<button type='submit'>REGISTER</button>
+	<label for='mdp'>Mot de passe (6 caractères minimum) : </label><input type='password' name='mdp' value="" id='mdp' required />
+	<label for='mdp2'>Vérification mot de passe : </label><input type='password' name='mdp2' value="" id='mdp2' required />
+	<button type='submit'>S'enregistrer</button>
 </form>

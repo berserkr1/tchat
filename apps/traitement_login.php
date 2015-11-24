@@ -1,8 +1,8 @@
 <?php
-	$pseudo=""; $mdp="";
+	$pseudo=$mdp="";
 		if (isset($_POST['pseudo'], $_POST['mdp'])) {
 		$pseudo = mysqli_real_escape_string($db, $_POST['pseudo']);
-		$mdp = $_POST['mdp'];
+		$mdp = mysqli_real_escape_string($db, $_POST['mdp']);
 		$query = "SELECT * FROM user WHERE pseudo='".$pseudo."'";
 		$resultat = mysqli_query($db, $query);
 		if ($resultat)
@@ -14,7 +14,7 @@
 				{
 					$_SESSION['id'] = $user['id'];
 					$_SESSION['admin'] = (boolean)$user['admin'];
-					$_SESSION['login'] = $user['pseudo'];
+					$_SESSION['pseudo'] = $user['pseudo'];
 					header('Location: index.php');
 					exit;
 				}
@@ -30,7 +30,7 @@
 		}
 		else
 		{
-			$errors[] = "Internal server error";
+			$errors[] = "Erreur interne au serveur";
 		}
 	}
 ?>

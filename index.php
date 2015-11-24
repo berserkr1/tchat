@@ -1,13 +1,13 @@
 <?php
-session_start();
-$errors= array();
-$db = mysqli_connect('192.168.1.84', 'guillaume', '', 'tchat');
-if ($db === false)
-	die(mysqli_connect_error()); 	
+	session_start();
+	$db = mysqli_connect('192.168.1.84', 'guillaume', '', 'tchat');
+	if ($db === false)
+		die(mysqli_connect_error());
+	$errors= array(); 	
 	$access = array('accueil', 'login', 'logout', 'register');
-	$traitements = array('login', 'logout', 'register','accueil');
+	$traitements = array('accueil', 'login', 'logout', 'register');
 	$accessAdmin = array('admin', 'accueil', 'login', 'logout', 'register');
-	$traitementsAdmin = array('admin', 'login', 'logout', 'register','accueil');
+	$traitementsAdmin = array('admin', 'accueil', 'login', 'logout', 'register');
 	$page = 'accueil';
 	if (isset($_GET['page']))
 	{
