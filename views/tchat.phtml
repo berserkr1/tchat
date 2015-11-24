@@ -1,7 +1,6 @@
-<p>Hello World</p>
-<div class="tchat">
-	<form action="apps/traitement_tchat.php" method="post">
-		<input type="text" name="post"><button>Envoyer</button><br>		
-	</form>
-	<?=htmlentities($post['contenu'])?>
-</div>
+<div style="background-color:red;"><?php echo implode('<br/>', $errors) ?></div>
+<div class="tchat-read"></div>
+<form method="post" action="apps/traitement_tchat.php">
+	<textarea name="message" placeholder="Tapez votre message" class="tchat-write"><?php if(isset($message)) echo htmlentities($message); ?></textarea>
+	<button type="submit">Envoyer</button>
+</form>
