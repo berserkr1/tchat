@@ -7,8 +7,8 @@ if ($db === false)
 	die(mysqli_connect_error()); 	
 $errors = array();
 
-$access = array('accueil', 'login', 'logout', 'register');
-$traitements = array('login', 'logout', 'register');
+$access = array('accueil', 'login', 'logout', 'register', 'tchat');
+$traitements = array('login', 'logout', 'register', 'tchat');
 
 $accessAdmin = array('admin', 'accueil', 'login', 'logout', 'register');
 $traitementsAdmin = array('admin', 'login', 'logout', 'register');
