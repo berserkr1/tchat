@@ -1,13 +1,13 @@
 <?php
 session_start();
 $errors= array();
-$db = mysqli_connect('localhost', 'root', 'troiswa', 'tchat');
+$db = mysqli_connect('192.168.1.84', 'guillaume', '', 'tchat');
 if ($db === false)
 	die(mysqli_connect_error()); 	
 	$access = array('accueil', 'login', 'logout', 'register');
-	$traitements = array('login', 'logout', 'register');
+	$traitements = array('login', 'logout', 'register','accueil');
 	$accessAdmin = array('admin', 'accueil', 'login', 'logout', 'register');
-	$traitementsAdmin = array('admin', 'login', 'logout', 'register');
+	$traitementsAdmin = array('admin', 'login', 'logout', 'register','accueil');
 	$page = 'accueil';
 	if (isset($_GET['page']))
 	{
