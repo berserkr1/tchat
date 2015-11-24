@@ -1,6 +1,6 @@
 <div><?php echo implode('<br/>', $errors) ?></div>
 <div class="tchat-read"></div>
-<form id="formulaire" method="post" action="index.php?page=tchat">
-	<textarea name="post" placeholder="Tapez votre message" class="tchat-write"></textarea><br>
-	<button type="submit">Envoyer</button>
+<form name="form1" id="formulaire" method="post" action="index.php?page=tchat">
+	<input type="text" name="input" value=""><br>
+	<input type="button" name="bouton" value="Contrôler" onClick="controle(form1)">
 </form>
