@@ -1,1 +1,7 @@
 <p>Hello World</p>
+<div class="tchat">
+	<form action="apps/traitement_tchat.php" method="post">
+		<input type="text" name="post"><button>Envoyer</button><br>		
+	</form>
+	<?=htmlentities($post['contenu'])?>
+</div>
