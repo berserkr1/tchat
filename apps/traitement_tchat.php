@@ -8,7 +8,7 @@
 	if (isset($_POST['post']))
 	{
 		$post = mysqli_real_escape_string($db, $_POST['post']);
-		$query2 = "INSERT INTO `tchat`.`post` (`id`, `id_user`, `contenu`, `date`) VALUES (NULL, '" . $user['id'] . "', '" . $post . "', CURRENT_TIMESTAMP)";
+		$query2 = "INSERT INTO `tchat`.`post` (`id`, `id_user`, `contenu`, `date`) VALUES (NULL, '" . $_SESSION['id'] . "', '" . $post . "', CURRENT_TIMESTAMP)";
 		$resultat = mysqli_query($db, $query2);
 		if ($resultat)
 		{
