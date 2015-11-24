@@ -1,10 +1,33 @@
-$(document).ready(function() {
-	$("#formulaire").submit(function(e) {
-		e.preventDefault();		
-        });
-});
+function charger()
+	{
+		setInterval(function()
+		{
+			$.get('', function(page)
+			{
+				$('section').html(page);
+			});
+		}, 1000);
+	}
 
-function controle(form1) {
-var post = document.form1.input.value;
-alert(post);
-}
+$(document).ready(function()
+{
+	$("#formulaire").submit(function(e)
+	{
+		e.preventDefault();
+		var message = $('#message').val();
+		if(message != "")
+		{			
+				$.ajax
+				({
+					url : "index.php?page=tchat",
+					type : "POST",
+					data:{"input":message},
+					success : function(html)
+					{
+						$('#message').prepend(html);
+					}
+				});	
+			charger();			
+		}
+	});
+});

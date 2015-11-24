@@ -2,7 +2,7 @@
 if (isset($_SESSION['id']))
 {
 	require('views/tchat.phtml');
-	$query = "SELECT user.pseudo, post.contenu, post.date
+	$query = "SELECT user.pseudo, post.contenu, post.date, user.avatar
 			  FROM post
 			  LEFT JOIN user ON post.id_user = user.id
 			  ORDER BY `post`.`date` DESC
