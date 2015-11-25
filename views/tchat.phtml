@@ -1,6 +1,6 @@
 <div style="background-color:red;"><?php echo implode('<br/>', $errors) ?></div>
 <div id="tchat-read"><?php if(function_exists('messages')) {messages();} ?></div>
-<form method="post" action="index.php?page=accueil" onsubmit="">
+<form id="tchat-form" method="post" action="index.php?page=accueil">
 	<textarea name="message" placeholder="Tapez votre message" id="tchat-write"><?php if(isset($message)) echo htmlentities($message); ?></textarea>
 	<button type="submit" class="pull-right">Envoyer</button>
 </form>
