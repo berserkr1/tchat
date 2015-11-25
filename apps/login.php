@@ -1,11 +1,7 @@
 <?php
-if(count($errors)>0){
+if(count($errors) > 0){
     for($i = 0; $i < count($errors); $i++){
-        require('./views/login/errors/'.$errors[$i].'.phtml');
+        echo ("");
     }
 }
-require('./views/login.phtml');
-
-
-
-	
+require('./views/login.phtml');	

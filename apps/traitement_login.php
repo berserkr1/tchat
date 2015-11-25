@@ -17,7 +17,7 @@
 				$_SESSION['id'] = $user['id'];
 				$_SESSION['admin'] = (boolean)$user['admin'];
 				$_SESSION['login'] = $user['pseudo'];
-				header('Location: index.php');
+				header('Location: index.php?page=tchat');
 				exit;
 			}
 			else
