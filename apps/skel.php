@@ -2,7 +2,7 @@
 	$titre = "Tchat";	
 	if (isset($_GET['ajax']))
 	{
-		require('apps/tchat_list.php');
+		require('./apps/tchat_list.php');
 	}
 	else
 	{

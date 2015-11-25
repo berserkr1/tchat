@@ -2,7 +2,7 @@ function charger()
 	{
 		setInterval(function()
 		{
-			$.get('', function(page)
+			$.get('index.php?page=tchat&ajax', function(page)
 			{
 				$('section').html(page);
 			});
