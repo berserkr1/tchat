@@ -1,5 +1,5 @@
 <?php 
-$nombreDeMessagesParPage = 5;
+$nombreDeMessagesParPage = 10;
 $nombreOffset = 0;
 if (isset($_GET['p']) && is_numeric($_GET['p'])) {
     $nombreDeMessagesParPage = intval($_GET['p']);

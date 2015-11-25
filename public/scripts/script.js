@@ -1,14 +1,14 @@
 function charger()
 	{
-		setInterval(function()
-		{
-			$.get('index.php?page=tchat&ajax', function(page)
+		$.get('index.php?page=tchat_list&ajax', function(page)
 			{
-				$('section').html(page);
+				$('.tchat-list').html(page);
 			});
-		}, 1000);
 	}
-
+setInterval(function()
+		{
+			charger();
+		}, 1000);
 $(document).ready(function()
 {
 	$("#formulaire").submit(function(e)
@@ -24,10 +24,10 @@ $(document).ready(function()
 					data:{"input":message},
 					success : function(html)
 					{
-						$('#message').prepend(html);
+						charger();
+						$('#message').val('');
 					}
-				});	
-			charger();			
+				});			
 		}
 	});
 });

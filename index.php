@@ -5,7 +5,7 @@ if ($db === false)
 	die(mysqli_connect_error()); 	
 $errors = array();
 
-$access = array('accueil', 'login', 'logout', 'register', 'tchat');
+$access = array('accueil', 'login', 'logout', 'register', 'tchat', 'tchat_list');
 $traitements = array('login', 'logout', 'register', 'tchat');
 
 $page = 'accueil';
