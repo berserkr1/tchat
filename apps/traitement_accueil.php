@@ -17,7 +17,7 @@
 		$resultat = mysqli_query($db, $query);
 		if ($resultat) {
 			while ($message = mysqli_fetch_assoc($resultat)) {
-				echo "<".$message['date']."> ".$message['pseudo']." : ".htmlentities($message['contenu'])."<br/>";
+				echo "<".$message['date']."> ".htmlentities($message['pseudo'])." : ".htmlentities($message['contenu'])."<br/>";
 			}
 		}
 	}
