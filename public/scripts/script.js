@@ -5,10 +5,12 @@ function charger()
 				$('.tchat-list').html(page);
 			});
 	}
+
 setInterval(function()
 		{
 			charger();
 		}, 1000);
+
 $(document).ready(function()
 {
 	$("#formulaire").submit(function(e)

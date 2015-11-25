@@ -1,6 +1,6 @@
 <section>
 	<div class="tchat date"><?=$post['date']?></div>
-	<div class="tchat avatar"><?=$post['avatar']?></div>
-	<div class="tchat pseudo"><?=$post['pseudo']?></div>
-	<div class="tchat contenu"><?=$post['contenu']?></div><br>
+	<div class="tchat avatar"><?=htmlentities($post['avatar'])?></div>
+	<div class="tchat pseudo"><?=htmlentities($post['pseudo'])?></div>
+	<div class="tchat contenu"><?=htmlentities($post['contenu'])?></div><br>
 </section>
